@@ -28,7 +28,7 @@ label2 = tk.Label(root, text = text1, justify = tk.LEFT, padx = 10)
 label2.pack(side = "left")
 
 # fotos can be included as well
-foto1 = tk.PhotoImage(file = "/Users/daniel/Projects_myApplications/AppInDev/giphy-downsized.gif")
+foto1 = tk.PhotoImage(file = "giphy-downsized.gif")
 logo1 = tk.Label(root, image = foto1)
 logo1.pack(side = "right") # currently, just GIF and PPM/PGM formats!
 
