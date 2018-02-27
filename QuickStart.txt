@@ -1,0 +1,11 @@
+Quick Start Guide:
+
+# use command line to make an app from the setup.py file:
+$python setup.py py2app -A
+# (you must be in the setup.py's directory)
+
+--> download this GitHub repository and un-zip it;
+--> than build the app using the command line as described above.
+--> paths to data files (icon and .gif) are relative and should not give any errors
+--> setup.py greps DanielsTestApp_v0.01.py and additional parameters for build
+--> setup.py should also allow for cross-plattform use (windows uses py2exe instead of py2app) 
