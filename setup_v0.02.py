@@ -14,8 +14,10 @@ import os
 import sys
 
 APP = ['DanielsTestApp_v0.02.py']
-DATA_FILES = ['giphy-downsized.gif']
+DATA_FILES = ['giphy-downsized.gif'] 
 ICON = 'if_application-x-python_8974.icns'
+# .py AND .gif AND .icns need to be in the same directory
+# to allow a successful build of an app with this setup.py
 
 name = 'DanielsTestApp_v0.02'
 version = '0.0.2'
