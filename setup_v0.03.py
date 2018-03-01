@@ -13,12 +13,14 @@ from plistlib import Plist
 import os
 import sys
 
-APP = ['DanielsTestApp_v0.01.py']
-DATA_FILES = ['giphy-downsized.gif']
-ICON = '/Users/daniel/Projects_myApplications/AppInDev/if_application-x-python_8974.icns'
+APP = ['DanielsTestApp_v0.03.py']
+DATA_FILES = ['giphy-downsized.gif'] 
+ICON = 'if_application-x-python_8974.icns'
+# .py AND .gif AND .icns need to be in the same directory
+# to allow a successful build of an app with this setup.py
 
-name = 'DanielsTestApp_v0.01'
-version = '0.0.1'
+name = 'DanielsTestApp_v0.03'
+version = '0.0.3'
 
 if sys.platform == 'darwin':
     extra_options = dict(
