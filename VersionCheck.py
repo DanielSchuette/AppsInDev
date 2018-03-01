@@ -2,6 +2,7 @@
 developed by Daniel (d.schuette@online.de)
 This module helps to detect the python version
 at runtime while loading the correct tkinter
+repository: https://github.com/DanielSchuette/AppsInDev.git
 '''
 
 # identify python version and import functions that are version dependent
