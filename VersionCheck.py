@@ -1,3 +1,9 @@
+'''
+developed by Daniel (d.schuette@online.de)
+This module helps to detect the python version
+at runtime while loading the correct tkinter
+'''
+
 # identify python version and import functions that are version dependent
 def pythonVersionCheck():
 	import sys # sys is not a global import
