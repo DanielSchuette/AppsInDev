@@ -53,9 +53,13 @@ setup(
     		resources=[ICON],
     		plist=dict(
     			CFBundleName = name,
+                CFBundleDisplayName = name,
+                CFBundleIdentifier = "Daniel Schuette",
+                CFBundleVersion = 0.03,
     			CFBundleShortVersionString = version,
     			CFBundleGetInfoString = name+" "+ version,
     			CFBundleExecutable = name,
+                NSHumanReadableCopyright = "Copyright (c) 2018, Daniel Schuette, All Rights Reserved"
     		),
     	),
     ),
