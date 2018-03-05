@@ -10,3 +10,4 @@ none
 current projects - 
 
 02/27/18: Tkinter-based python app to pull gene expression data from Gene Expression Omnibus repositories
+03/04/18: Python app to analyze and visualize calcium imaging experiments
