@@ -9,8 +9,8 @@ repository: https://github.com/DanielSchuette/AppsInDev.git
 import VersionCheck as vs
 vs.pythonVersionCheck() # makes tk available in module
 from VersionCheck import tk # imports tk from module
-
 import helper_functions as hp
+import tkMessageBox
 
 # initializes a window and an additional frame
 root = tk.Tk()
@@ -99,6 +99,13 @@ button4.pack(side = tk.RIGHT)
 label4.pack(side = tk.BOTTOM, anchor = tk.W, pady = 20) # pady to keep some space between elements in y direction
 checkbut1.pack(side = tk.BOTTOM, anchor = tk.W, pady = 2)
 checkbut2.pack(side = tk.BOTTOM, anchor = tk.W, pady = 2)
+
+# include a message box to interact with window manager
+def callback4():
+    if tkMessageBox.askokcancel("Quit", "Do you really wish to quit?"):
+        root.destroy()
+
+root.protocol("WM_DELETE_WINDOW", callback4)
 
 # starts mainloop
 root.mainloop() 

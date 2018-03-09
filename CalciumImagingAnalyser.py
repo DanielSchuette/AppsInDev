@@ -7,12 +7,30 @@ repository: https://github.com/DanielSchuette/AppsInDev.git
 '''
 import tifffile as tiff # module downloaded from https://github.com/blink1073/tifffile.git
 import numpy as np
+import pandas as pd
 import matplotlib
+matplotlib.use("TkAgg") # otherwise matplotlib will crash the app
 import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
 from pylab import *
 import cv2 as cv2
+import tkinter as tk
+from tkinter import ttk
 
+''' 
+module 1: grafical user interface to the app 
+'''
+# set up window
+root = tk.Tk()
+frame1 = tk.Frame(root, width = 500, heigth = 50)
+frame1.pack(expand = True, fill = BOTH, side = TOP)
+
+# start mainloop
+root.mainloop()
+
+''' 
+module 2: analysis workflow 
+'''
 # program start 
 print("\n" + "********************************" + "\n")
 
@@ -31,8 +49,8 @@ first_image = (image[0, 0, 1, 0:512, 0:512])
 first_image_zoomed = first_image[100:300, 100:300]
 
 # write tiffs for inspection to active working directory
-tiff.imsave("tmp.tif", image) # allows to save .lsm picture as a .tiff
-tiff.imsave("first_image.tif", first_image)
+# tiff.imsave("tmp.tif", image) # allows to save .lsm picture as a .tiff
+# tiff.imsave("first_image.tif", first_image)
 
 # check image dimensions before plotting
 print("\n" + "The plotted images is of " + str(type(first_image)) + " and a " + str(first_image.dtype) 
@@ -92,7 +110,6 @@ pixel_values = []
 cutoffs = []
 tmp3 = first_image
 for cutoff in range(256):
-	print(cutoff)
 	mask = tmp3 < cutoff
 	tmp3[mask] = 0
 	pixel_values.append(mean(mask) * 100)
@@ -106,5 +123,9 @@ plt.xlabel("Gray Scale Value Cutoff")
 plt.ylabel("Percentage of Cells Below Cutoff")
 plt.show("hold")
 
+# another way to plot the data
+# df = pd.DataFrame(data = pixel_values, index = cutoffs)
+# df.plot()
+# plt.show("hold")
 # program end
 print("\n" + "********************************" + "\n")
