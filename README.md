@@ -1,13 +1,16 @@
-# AppsInDev is a remote repository
+## AppsInDev is a remote repository
 This repository contains apps that are currently undergoing changes or are in development. 
 
-Project Log:
-previous projects - 
+## Project Log:
+
+# projects with a version that works - 
 
 none
 
 
-current projects - 
+# current projects - 
+
+02/25/18: TestApp is a simple counter
 
 02/27/18: Tkinter-based python app to pull gene expression data from Gene Expression Omnibus repositories
 

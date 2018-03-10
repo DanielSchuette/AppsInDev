@@ -81,7 +81,7 @@ checkbut2 = tk.Checkbutton(root, text = "academic use", variable = var3)
 
 # packs all elements of widget, also .grid(row = 0, sticky = tk.W)
 label3.pack()
-for name, color in background_colors: # splits tuples from above to iterate of colors
+for name, color in background_colors: # splits tuples from above to iterate over colors
 	tk.Radiobutton(root, text = name, padx = 20, variable = var1,
                    command = update_background_color, font = "Arial 16 italic",
                    value = color).pack(anchor = tk.W)
