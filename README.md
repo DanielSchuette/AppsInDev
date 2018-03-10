@@ -1,14 +1,14 @@
-## AppsInDev is a remote repository
+# AppsInDev is a remote repository
 This repository contains apps that are currently undergoing changes or are in development. 
 
-## Project Log:
+# Project Log:
 
-# projects with a version that works - 
+## projects with a version that works - 
 
 none
 
 
-# current projects - 
+## current projects - 
 
 02/25/18: TestApp is a simple counter
 
